@@ -58,8 +58,10 @@ function tan(a) {
 function dist(a) {
   let r = Math.sqrt(a.r * a.r + a.i * a.i);
   let theta = Math.atan(a.i / a.r);
-  return 
+  return [r, theta];
 }
 function ln(a) {
-  return 
+  let real = Math.ln(a.r * a.r + a.i * a.i) / 2;
+  let img = dist(a)[1];
+  return new complexNum(real, img);
 }

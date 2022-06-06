@@ -17,7 +17,8 @@ abs()
 
 usage : 
 var a = new ComplexNum(1,2); // 1+2i
-
+var b = new ComplexNum(2,-3); //2-3i
+Plus(a, b).value // 3-1i
 */
 
 Math.ln = function() {

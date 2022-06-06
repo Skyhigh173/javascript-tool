@@ -14,6 +14,7 @@ log()
 ln()
 ^
 abs()
+sqrt()
 
 usage : 
 var a = new ComplexNum(1,2); // 1+2i
@@ -107,4 +108,13 @@ function Pow(a, b) {
   let real = m2 + Math.cos(theta2);
   let img = Math.sin(theta2);
   return new ComplexNum(real, img);
+}
+function sqrt(a) {
+  let Abs = abs(a);
+  let real = Math.sqrt((Abs + a.r) / 2);
+  let img = Math.sqrt((Abs - a.r) / 2);
+  let ans1 = new ComplexNum(real, img);
+  let ans2 = new ComplexNum(real, -(img));
+  return [ans1, ans2];
+}
 }

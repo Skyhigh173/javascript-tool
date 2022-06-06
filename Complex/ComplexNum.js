@@ -26,6 +26,13 @@ a.r //to get real part
 
 */
 
+const PI = new RealNum(3.1415926535897932);
+const I = new ComplexNum(0, 1);
+const E = new RealNum(2.71828182845904523536);
+const SQRT2 = new RealNum(1.414213562373095048801688724209);
+const SQRT3 = new RealNum(1.7320508075);
+const OMEGA = new RealNum(0.56714329040978387299996866221035554);
+
 Math.ln = function() {
   return Math.log(arguments[0]) / Math.log(Math.E);
 }

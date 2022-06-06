@@ -41,7 +41,13 @@ export class ComplexNumer {
         */
         this.OMEGA;
     }
-        
+    
+     /**
+     * @param {number} real - real part of complex numbers
+     * @param {number} img - imginary part of complex numbers
+     * @returns {variable} var - setup a variable / complex number
+     */
+     ComplexNum(real, img);
         
         
         

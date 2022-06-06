@@ -19,6 +19,11 @@ usage :
 var a = new ComplexNum(1,2); // 1+2i
 var b = new ComplexNum(2,-3); //2-3i
 Plus(a, b).value // 3-1i
+
+get value:
+a.i //to get img part
+a.r //to get real part
+
 */
 
 Math.ln = function() {

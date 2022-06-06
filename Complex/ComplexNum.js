@@ -21,7 +21,7 @@ var a = new ComplexNum(1,2); // 1+2i
 */
 
 Math.ln = function() {
-  return Math.log(arguments) / Math.log(Math.E));
+  return Math.log(arguments[0]) / Math.log(Math.E);
 }
 
 function ComplexNum(real, img) {

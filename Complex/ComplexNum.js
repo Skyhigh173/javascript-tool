@@ -65,3 +65,8 @@ function ln(a) {
   let img = dist(a)[1];
   return new complexNum(real, img);
 }
+function log(a) {
+  let one = ln(a);
+  let two = new ComplexNum(Math.log(Math.E), 0);
+  return Times(one, two);
+}

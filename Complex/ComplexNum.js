@@ -35,6 +35,8 @@ function Minus(a, b) {
 function Times(a, b) {
   return new ComplexNum((a.r * b.r - a.i * b.i ), (a.i * b.r + a.r * b.i));
 }
-//function Divide(a, b) {
-//  return new ComplexNum((a.r * b.r + a.i * b.i), ());
-//}
+function Divide(a, b) {
+  let real = (a.r * b.r + a.i * b.i) / (b.r * b.r + b.i * b.i);
+  let img = (a.i * b.r - a.r * b.i) / (b.r * b.r + b.i * b.i);
+  return new ComplexNum(real, img);
+}

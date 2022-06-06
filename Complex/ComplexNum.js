@@ -12,6 +12,7 @@ log()
 ln()
 tan()
 ^
+abs()
 
 usage : 
 var a = new ComplexNum(1,2); // 1+2i
@@ -31,6 +32,9 @@ function Plus(a, b) {
 function Minus(a, b) {
   return new ComplexNum((a.r - b.r), (a.i - b.i));
 }
-//function Times(a, b) {
-//  return new ComplexNum((a.r * b.r - a.i ), ());
+function Times(a, b) {
+  return new ComplexNum((a.r * b.r - a.i * b.i ), (a.i * b.r + a.r * b.i));
+}
+//function Divide(a, b) {
+//  return new ComplexNum((a.r * b.r + a.i * b.i), ());
 //}

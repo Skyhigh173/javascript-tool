@@ -8,9 +8,9 @@ supported calc:
 /
 sin()
 cos()
+tan()
 log()
 ln()
-tan()
 ^
 abs()
 
@@ -26,6 +26,7 @@ function ComplexNum(real, img) {
   this.i = img;
   this.value = real + "+" + img + "i";
 }
+
 function Plus(a, b) {
   return new ComplexNum((a.r + b.r), (a.i + b.i));
 }
@@ -44,4 +45,10 @@ function sin(a) {
   let real = Math.sin(a.r) * Math.cosh(a.i);
   let img = Math.cos(a.r) * Math.sinh(a.i);
   return new ComplexNum(real, img);
+}
+function cos(a) {
+  let real = Math.cos(a.r) * Math.cosh(a.i);
+  let img = 0 - Math.sin(a.r) * Math.sinh(a.i);
+  return new ComplexNum(real, img);
+}
 }

@@ -40,3 +40,8 @@ function Divide(a, b) {
   let img = (a.i * b.r - a.r * b.i) / (b.r * b.r + b.i * b.i);
   return new ComplexNum(real, img);
 }
+function sin(a) {
+  let real = Math.sin(a.r) * Math.cosh(a.i);
+  let img = Math.cos(a.r) * Math.sinh(a.i);
+  return new ComplexNum(real, img);
+}

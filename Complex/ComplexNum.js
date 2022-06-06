@@ -9,6 +9,7 @@ supported calc:
 sin()
 cos()
 tan()
+dist()
 log()
 ln()
 ^
@@ -51,4 +52,14 @@ function cos(a) {
   let img = 0 - Math.sin(a.r) * Math.sinh(a.i);
   return new ComplexNum(real, img);
 }
+function tan(a) {
+  return Divide(sin(a), cos(a));
+}
+function dist(a) {
+  let r = Math.sqrt(a.r * a.r + a.i * a.i);
+  let theta = Math.atan(a.i / a.r);
+  return 
+}
+function ln(a) {
+  return 
 }

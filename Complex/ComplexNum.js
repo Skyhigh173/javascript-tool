@@ -35,7 +35,17 @@ function ComplexNum(real, img) {
   this.i = img;
   this.value = real + "+" + img + "i";
 }
+function RealNum(real) {
+  this.r = real:
+  this.i = 0;
+  this.value = real;
+}
+function ComplexNumFrom (str) {
+  this.r = str.slice(0, str.lastIndexOf("+"));
+  this.i = str.slice(str.lastIndexOf("+")+1, str.length-1);
+  this.value = this.r + "+" + this.i + "i";
 
+}
 function Plus(a, b) {
   return new ComplexNum((a.r + b.r), (a.i + b.i));
 }
@@ -71,7 +81,7 @@ function dist(a) {
 function ln(a) {
   let real = Math.ln(a.r * a.r + a.i * a.i) / 2;
   let img = dist(a)[1];
-  return new complexNum(real, img);
+  return new ComplexNum(real, img);
 }
 function log(a) {
   let one = ln(a);
@@ -79,7 +89,7 @@ function log(a) {
   return Times(one, two);
 }
 function abs(a) {
-  return dist(a)[0];
+  return new RealNum(dist(a)[0]);
 }
 
 function Pow(a, b) {

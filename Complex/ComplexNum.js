@@ -28,3 +28,9 @@ function ComplexNum(real, img) {
 function Plus(a, b) {
   return new ComplexNum((a.r + b.r), (a.i + b.i));
 }
+function Minus(a, b) {
+  return new ComplexNum((a.r - b.r), (a.i - b.i));
+}
+//function Times(a, b) {
+//  return new ComplexNum((a.r * b.r - a.i ), ());
+//}

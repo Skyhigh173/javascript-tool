@@ -46,7 +46,7 @@ function ComplexNum(real, img) {
   this.absI = Math.abs(img);
 }
 function RealNum(real) {
-  this.r = real:
+  this.r = real;
   this.i = 0;
   this.value = real;
 }
@@ -105,7 +105,7 @@ function abs(a) {
 function Pow(a, b) {
   let m1 = abs(a);
   let theta1 = dist(a)[1];
-  let m2 = Math.pow(m1, b.r) / Math.pow(Math.E, b.i * theta1);
+  let m2 = Math.pow(m1.r, b.r) / Math.pow(Math.E, b.i * theta1);
   let theta2 = b.r * theta1 + b.i * Math.ln(m1);
   let real = m2 + Math.cos(theta2);
   let img = Math.sin(theta2);

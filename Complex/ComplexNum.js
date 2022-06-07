@@ -42,6 +42,8 @@ function ComplexNum(real, img) {
   this.r = real;
   this.i = img;
   this.value = real + "+" + img + "i";
+  this.absR = Math.abs(real);
+  this.absI = Math.abs(img);
 }
 function RealNum(real) {
   this.r = real:

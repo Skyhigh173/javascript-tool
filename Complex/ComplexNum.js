@@ -119,4 +119,3 @@ function sqrt(a) {
   let ans2 = new ComplexNum(real, -(img));
   return [ans1, ans2];
 }
-}

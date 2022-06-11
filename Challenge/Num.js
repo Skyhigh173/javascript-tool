@@ -1,14 +1,8 @@
-var char = ["0","1","2","3","4","5","6","7","8","9","a", "b", "c", "d", "e", "f"]
-var nums = [1,0,0,0,0,0,1,0,2,1,1,1,0,1,1,0];
-
-function getChar (txt) {
-
-  return nums[char.indexOf(txt)];
-}
-function getTotal (four) {
-  let tl = 0;
-  for (let i = 0; i < four.length; i++) {
-    tl += getChar(four.charAt(i));
+function SolverV1 (inp) {
+  let chars = "0689abdgopq", val = "11211111111";
+  let c = 0;
+  for (let i=0; i < inp.length; i++) {
+    if (chars.includes(inp.charAt(i))) c += val.charAt(char.indexOf(inp.charAt(i)));
   }
-  return tl;
+  return c;
 }

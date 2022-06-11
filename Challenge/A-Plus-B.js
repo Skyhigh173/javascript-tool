@@ -1,5 +1,5 @@
 function SolverV1 (a, b){
-  // a and b must be a string
+  // a and b must be a string!!!
   let k = Math.max(a.length, b.length);
   let result = "";
   let next=0,an=0,bn=0,sum=0;

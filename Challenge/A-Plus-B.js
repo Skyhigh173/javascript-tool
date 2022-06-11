@@ -1,6 +1,6 @@
 function SolverV1 (a, b){
   // a and b must be a string!!!
-  if (a.length > b.length) { return SolverV1(b, a); 
+  if (a.length > b.length) return SolverV1(b, a); 
   let k = Math.max(a.length, b.length);
   let result = "";
   let diff = Math.abs(a.length - b.length);

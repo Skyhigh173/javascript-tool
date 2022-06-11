@@ -1,6 +1,6 @@
 class Utils {
 
-  constructor() {}
+  //constructor() {}
 
   getInfo() {
     return {
@@ -26,7 +26,7 @@ class Utils {
               }
           }
       ]
-    }
+    };
   }
   moreOrEqual({A, B}) {
     return A >= B;

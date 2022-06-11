@@ -1,11 +1,8 @@
 function SolverV1 (a, b){
   // a and b must be a string!!!
   if (b.length > a.length) return SolverV1(b, a); 
-  let k = Math.max(a.length, b.length);
-  let result = "";
-  let diff = Math.abs(a.length - b.length);
+  let k=a.length,result="",diff=a.length-b.length,next=0,an=0,bn=0,sum=0;
   let N = (L) => Number(L);
-  let next=0,an=0,bn=0,sum=0;
   for (let i = k; i > 0; i--){
     an = a.charAt(i-1);
     bn = b.charAt(i-(1+diff));

@@ -1,14 +1,23 @@
 function findArray(str) {
   let result = [];
   let loops = 0;
+  let char = "";
   for (let i = 0; i < str.length; i++) {
-    let char = str.charAt(i);
-    if (char == "[") { loops += 1; result.push(loops); }
-    else if (char == "]") { result.push(loops); loops -=1; }
+    char = str.charAt(i);
+    
+    if (char == "[") {
+      loops += 1; 
+      result.push(loops); 
+    } 
+    else if (char == "]") {
+      result.push(loops); 
+      loops -=1;
+    } 
     else result.push("");
   }
   return result;
 }
+
 function run(command) {
   let pointer = 0;
   let chars = "";

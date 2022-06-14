@@ -51,21 +51,24 @@ function run(command) {
       output = output + String.fromCharCode(array[pointer]);
       continue;
     }
+    
     if (chars == "[") {
-      let index = loop[Current];
+      let index = loop[Current-1];
+      
       if (array[pointer] == 0) {
         Current += 1;
-        while (loop[Current] != index) {
+        while (loop[Current-1] != index) {
           Current += 1;
         }
       }
       continue;
     }
     if (chars == "]") {
-      let index = loop[Current];
+      let index = loop[Current-1];
+      
       if (array[pointer] != 0) {
         Current -= 1;
-        while (loop[Current] != index) {
+        while (loop[Current-1] != index) {
           Current -= 1;
         }
       }

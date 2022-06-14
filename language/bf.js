@@ -44,20 +44,20 @@ function run(command) {
       continue;
     }
     if (chars == "[") {
-      let index = loop[pointer];
+      let index = loop[Current];
       if (array[pointer] == 0) {
         Current += 1;
-        while (loop[pointer] != index) {
+        while (loop[Current] != index) {
           Current += 1;
         }
       }
       continue;
     }
     if (chars == "]") {
-      let index = loop[pointer];
+      let index = loop[Current];
       if (array[pointer] != 0) {
         Current -= 1;
-        while (loop[pointer] != index) {
+        while (loop[Current] != index) {
           Current -= 1;
         }
       }

@@ -17,7 +17,6 @@ function findArray(str) {
   }
   return result;
 }
-
 function run(command) {
   let pointer = 0;
   let chars = "";
@@ -25,7 +24,7 @@ function run(command) {
   let output = "";
   let loop = findArray(command);
   let Current = 0;
-  for (let i = 0; i < command.length; i++) {
+  while (Current < command.length) {
     chars = command.charAt(Current);
     Current += 1;
     if (chars == ">") {
@@ -47,7 +46,7 @@ function run(command) {
       array[pointer] -= 1;
       continue;
     }
-    
+
     if (chars == ".") {
       output = output + String.fromCharCode(array[pointer]);
       continue;

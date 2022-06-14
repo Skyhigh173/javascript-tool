@@ -51,6 +51,18 @@ function run(command) {
       }
       continue;
     }
-    if (chars == "]"
+    if (chars == "]") {
+      let index = loop[pointer];
+      if (array[pointer] != 0) {
+        pointer -= 1;
+        while (loop[pointer] != index) {
+          pointer -= 1;
+        }
+      }
+      continue;
+    }
+  }
+  console.log(output);
+}
     
     

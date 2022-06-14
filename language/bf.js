@@ -3,9 +3,9 @@ function findArray(str) {
   let loops = 0;
   for (let i = 0; i < str.length; i++) {
     let char = str.charAt(i);
-    if (char == "[") { loops += 1; result.push[loops]; };
-    else if (char == "]") { result.push[loops]; loops -=1; };
-    else result.push[""];
+    if (char == "[") { loops += 1; result.push(loops); }
+    else if (char == "]") { result.push(loops); loops -=1; }
+    else result.push("");
   }
   return result;
 }

@@ -7,6 +7,7 @@ function findArray(str) {
     else if (char == "]") { result.push[loops]; loops -=1; };
     else result.push[""];
   }
+  return result;
 }
 function run(command) {
   let pointer = 0;
@@ -14,9 +15,10 @@ function run(command) {
   let array = [0];
   let output = "";
   let loop = findArray(command);
+  let Current = 0;
   for (let i = 0; i < command.length; i++) {
-    chars = command.charAt(i);
-    
+    chars = command.charAt(Current);
+    Current += 1;
     if (chars == ">") {
       pointer += 1;
       if (pointer > array.length-1) array.push(0);
@@ -38,15 +40,15 @@ function run(command) {
     }
     
     if (chars == ".") {
-      output = output + String.charCodeAt(array[pointer]);
+      output = output + String.fromCharCode(array[pointer]);
       continue;
     }
     if (chars == "[") {
       let index = loop[pointer];
       if (array[pointer] == 0) {
-        pointer += 1;
+        Current += 1;
         while (loop[pointer] != index) {
-          pointer += 1;
+          Current += 1;
         }
       }
       continue;
@@ -54,9 +56,9 @@ function run(command) {
     if (chars == "]") {
       let index = loop[pointer];
       if (array[pointer] != 0) {
-        pointer -= 1;
+        Current -= 1;
         while (loop[pointer] != index) {
-          pointer -= 1;
+          Current -= 1;
         }
       }
       continue;

@@ -7,8 +7,11 @@ export const math {
   }
   
   log10: (M) => {
-    let getLength = (txt) => Number(Math.floor(txt).toString().length-1);
-    
+    let getLength = (txt) => {
+      if (txt >= 1) return Number(Math.floor(txt).toString().length-1);
+      else return Number(Math.floor(1/txt).toString().length-1);
+    }
+
     
     let txt = getLength(M);
     

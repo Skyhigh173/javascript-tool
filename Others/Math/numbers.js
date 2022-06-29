@@ -23,4 +23,8 @@ export const math {
     }
     return Number(result);
   }
+  
+  logN: (base, M) => {
+    return math.log10(M) / math.log10(base);
+  }
 }

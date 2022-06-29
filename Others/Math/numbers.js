@@ -17,7 +17,6 @@ export const math {
     
     for (let i = 0; i < 50; i++) {
       txt = getLength(Mn);
-      console.log("i = " + i + " and txt " + txt + " l = " + result.length);
       Mn = (Mn / (10 ** txt)) ** 10;
       result += txt.toString();
     }

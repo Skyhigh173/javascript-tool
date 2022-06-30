@@ -15,9 +15,9 @@
 * sin-1 (asin) (arcsin)
 * cos-1 (acos) (arccos)
 * tan-1 (atan) (arctan)
-* 
-*
-*
+* floor
+* ceil
+* round
 */
 
 export const math {

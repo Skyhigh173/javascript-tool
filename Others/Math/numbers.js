@@ -84,4 +84,17 @@ export const math {
     }
     return ans;
   }
+  
+  cos: (n) => {
+    let ans = 1;
+    let tmp = 0;
+    for (let i = 1; i < 20; i++) {
+      tmp = math.pow(n, 2*i) / math.factorial(2*i);
+      if (math.mod(i, 2) == 1) tmp = 0 - tmp;
+      ans += tmp;
+    }
+    return ans;
+  }
+  
+  tan: (n) => math.sin(n) / math.cos(n);
 }

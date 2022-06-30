@@ -5,6 +5,7 @@
 * pow
 * log (n)
 * ln()
+* !
 * sin
 * cos
 * tan
@@ -30,7 +31,15 @@ export const math {
     let i = Math.floor(a / b);
     return (a / b - i) * a + i;
   }
-    
+  
+  factorial: (n) => {
+    let k = 1;
+    for (let i = 1; i < n + 1; i++) {
+      k *= i;
+    }
+    return k;
+  }
+  
   pow: (b, e) => {
     /* 10^(abs(b) * e) */
     let ans = 10 ** (math.log10(Math.abs(b)) * e);
@@ -62,5 +71,17 @@ export const math {
   logN: (base, M) => {
     /* log(M) / log(base) */
     return math.log10(M) / math.log10(base);
+  }
+  
+  sin: (n) => {
+    let ans = n;
+    let tmp = 0;
+    for (let i = 1; i < 20; i++) {
+      /* iterate using (+-) x^{2i+1}/(2i+1)! */
+      tmp = math.pow(n, 2*i+1) / math.factorial(2*i+1);
+      if (math.mod(i, 2) == 1) tmp = 0 - tmp;
+      ans += tmp;
+    }
+    return ans;
   }
 }
